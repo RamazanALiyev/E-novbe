@@ -39,7 +39,6 @@ export default function Stepone() {
       <div className='form'>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <TextField
-            style={{ width: '90%' }}
             id="outlined-basic"
             label="Xarici passport nömrəsi"
             defaultValue="13453243A"
