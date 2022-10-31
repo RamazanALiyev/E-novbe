@@ -18,7 +18,7 @@ const Login = () => {
     }
     return (
         <div className='login'>
-            {!sidebar ? <GiHamburgerMenu onClick={openSidebar} className='icon' /> : <AiOutlineFullscreenExit onClick={closeSidebar} className='icon' />}
+            {!sidebar ? <GiHamburgerMenu className='hamburger icon' onClick={openSidebar} /> : <AiOutlineFullscreenExit onClick={closeSidebar} className='cross icon' />}
             <Stack spacing={2} direction="row">
                 <Button variant="contained">Daxil ol →</Button>
             </Stack>

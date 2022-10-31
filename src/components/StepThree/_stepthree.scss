@@ -1,0 +1,13 @@
+.form {
+	display: flex;
+	width: 100%;
+	padding: 20px;
+	div {
+		width: 100%;
+		.MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+			width: 90%;
+			margin: 10px;
+			border-radius: 10px;
+		}
+	}
+}

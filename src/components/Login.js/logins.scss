@@ -1,8 +1,15 @@
-.login{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .icon{
-        font-size: 20px;
-    }
+.login {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	@media (max-width: 640px) {
+		justify-content: space-between;
+	}
+	.icon {
+		font-size: 20px;
+		display: none;
+		@media (max-width: 640px) {
+			display: block;
+		}
+	}
 }

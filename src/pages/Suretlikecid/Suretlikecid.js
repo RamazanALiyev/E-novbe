@@ -65,7 +65,7 @@ const Enovbedetail = () => {
                     <div>
                         <Stack spacing={2} direction="row">
                             <Button disabled variant="contained">Ana səhifə</Button>
-                            <Button disabled={checked} variant="contained"><Link className='link' to='/'>Davam et</Link></Button>
+                            <Button disabled={checked} variant="contained"><Link className='link' to='/stepperone'>Davam et</Link></Button>
                         </Stack>
                     </div>
                 </div>
