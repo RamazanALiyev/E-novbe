@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import './stepone.scss';
 import MenuItem from '@mui/material/MenuItem';
-
+import Button from '@mui/material/Button';
 
 const currencies = [
   {
@@ -53,9 +53,9 @@ export default function Stepone() {
               shrink: true,
             }}
           />
-          <div className='div' style={{ width: '100%', display: 'flex', margin: '0 auto' }}>
+          <div className='div' style={{ width: '90%', display: 'flex', justifyContent: 'space-between'}}>
             <TextField
-              style={{ width: '30%' }}
+              style={{ width: '35%' }}
               id="outlined-select-currency"
               select
               label="Telefon nömrəsi"
@@ -69,10 +69,13 @@ export default function Stepone() {
               ))}
             </TextField>
             <TextField
-            style={{ width: '90%' }}
-            id="outlined-basic"
-            variant="outlined" />
+              style={{ width: '60%' }}
+              id="outlined-basic"
+              variant="outlined" />
           </div>
+          <Button sx={{  width: '150px', fontSize: '8px' }} variant="contained">
+            kodu sms-lə göndər
+          </Button>
         </div>
         <div>
           <TextField id="outlined-basic" label="Soyadı, adı, ata adı" variant="outlined" />
