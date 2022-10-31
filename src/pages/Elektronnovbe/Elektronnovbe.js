@@ -54,11 +54,10 @@ const Enovbedetail = () => {
                     <FormControl component="fieldset">
                         <FormGroup aria-label="position" row>
                             <FormControlLabel
-                                value="end"
+                                style={{ fontSize: '12px' }}
                                 onChange={() => setChecked(checked => !checked)}
                                 control={<Checkbox />}
                                 label="Tanış oldum və razıyam"
-                                labelPlacement="end"
                             />
                         </FormGroup>
                     </FormControl>

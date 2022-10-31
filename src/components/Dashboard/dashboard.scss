@@ -5,16 +5,27 @@
 	background-color: rgba(47, 65, 99, 1);
 	padding: 18px 24px;
 	overflow-y: scroll;
+	transition: 300ms all;
 	&::-webkit-scrollbar {
 		display: none;
 	}
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
+	@media (max-width: 640px) {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		top: 4.7rem;
+		right: -100%;
+	}
 	.logoTitle {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 50px;
+		@media (max-width: 640px) {
+			margin-bottom: 20px;
+		}
 		span {
 			font-family: "Mulish", sans-serif;
 			font-weight: 700;
@@ -51,7 +62,18 @@
 				display: flex;
 				align-items: center;
 				line-height: 40px;
+				@media (max-width: 640px) {
+					line-height: 30px;
+				}
 			}
 		}
+	}
+}
+.dashboard.active {
+	@media (max-width: 640px) {
+		right: 0;
+		z-index: 1111;
+		overflow-y: scroll;
+		transition: 300ms all;
 	}
 }

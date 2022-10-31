@@ -53,7 +53,7 @@ export default function HorizontalNonLinearStepper() {
                     {steps.map((label, index) => (
                         <Step key={label} completed={completed[index]}>
                             <StepButton color="inherit" onClick={handleStep(index)}></StepButton>
-                            <p style={{ fontSize: '12px', textAlign: 'center', marginTop: '5px' }}>{label}</p>
+                            <p className='paragraph'>{label}</p>
                         </Step>
                     ))}
                 </Stepper>

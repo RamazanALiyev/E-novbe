@@ -11,8 +11,5 @@ root.render(
 </BrowserRouter>,
 );
 
-// material ui @4
-// material ui theming
-// material ui grid
 // material table diff
 // !final form

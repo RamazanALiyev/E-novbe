@@ -1,11 +1,23 @@
 .rightAll {
+	@media (max-width: 640px) {
+		width: 100%;
+		padding: 20px;
+	}
 	width: 75%;
+	height: 100vh;
 	padding: 34px 60px;
 	background: #f7f8fc;
 	.cards {
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: 640px) {
+			flex-direction: column;
+		}
 		.card {
+			@media (max-width: 640px) {
+				width: 100%;
+				margin-bottom: 20px;
+			}
 			width: 32%;
 			background: #ffffff;
 			border: 1px solid #eaeaea;

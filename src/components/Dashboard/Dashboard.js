@@ -10,9 +10,11 @@ import { TiInfoLargeOutline } from 'react-icons/ti';
 import { BiCommentDots } from 'react-icons/bi';
 import { FiLogIn } from 'react-icons/fi';
 import { GiConvergenceTarget } from 'react-icons/gi';
+import { Maincontext, useContext } from '../../context';
 const Dashboard = () => {
+    const { sidebar } = useContext(Maincontext)
     return (
-        <div className='dashboard'>
+        <div id='dashboard' className={!sidebar ? 'dashboard' : 'dashboard active'}>
             <h1 className='logoTitle'>
                 <img src={enovbeLogo} alt='e-novbeLogo' />
                 <span>E-customs</span>

@@ -15,9 +15,9 @@ export default function BasicBreadcrumbs() {
         navigate('/')
     }
     return (
-        <div className='breadCrumb' role="presentation" onClick={handleClick}>
+        <div className='breadCrumb' role="presentation">
             <Breadcrumbs aria-label="breadcrumb">
-                <Link style={{ color: '#000', fontWeight: 700 }} underline="hover" href="/">E-növbə</Link>
+                <Link onClick={handleClick} style={{ color: '#000', fontWeight: 700 }} underline="hover" href="/">E-növbə</Link>
                 {location.pathname !== '/' ? <Typography>elektron növbə</Typography> : null}
             </Breadcrumbs>
         </div>
