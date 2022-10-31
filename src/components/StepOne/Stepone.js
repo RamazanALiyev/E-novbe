@@ -37,7 +37,7 @@ export default function Stepone() {
       autoComplete="off"
     >
       <div className='form'>
-        <div >
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <TextField
             style={{ width: '90%' }}
             id="outlined-basic"
@@ -53,31 +53,15 @@ export default function Stepone() {
               shrink: true,
             }}
           />
-          <div className='div' style={{ width: '90%', display: 'flex', justifyContent: 'space-between'}}>
-            <TextField
-              style={{ width: '35%' }}
-              id="outlined-select-currency"
-              select
-              label="Telefon nömrəsi"
-              value={currency}
-              onChange={handleChange}
-            >
-              {currencies.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.value}
-                </MenuItem>
-              ))}
-            </TextField>
-            <TextField
-              style={{ width: '60%' }}
-              id="outlined-basic"
-              variant="outlined" />
-          </div>
-          <Button sx={{  width: '150px', fontSize: '8px' }} variant="contained">
+          <TextField
+            id="outlined-basic"
+            label="Telefon nömrəsi"
+            variant="outlined" />
+          <Button sx={{ width: '150px', fontSize: '8px'}} variant="contained">
             kodu sms-lə göndər
           </Button>
         </div>
-        <div>
+        <div  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <TextField id="outlined-basic" label="Soyadı, adı, ata adı" variant="outlined" />
           <TextField
             id="outlined-select-currency"
