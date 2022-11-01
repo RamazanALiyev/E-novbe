@@ -27,6 +27,7 @@ const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
 }));
+
 export default function Stepone() {
   const [currency, setCurrency] = React.useState('EUR');
 
@@ -45,7 +46,7 @@ export default function Stepone() {
     >
       <Grid container rowSpacing={2} columnSpacing={2} style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Grid item xs={12} md={6}>
-          <Item>
+          <Item sx={{ boxShadow: 0 }}>
             <TextField
               style={{ width: '100%' }}
               id="outlined-basic"
@@ -55,12 +56,12 @@ export default function Stepone() {
           </Item>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Item>
+          <Item sx={{ boxShadow: 0 }}>
             <TextField style={{ width: '100%' }} id="outlined-basic" label="Soyadı, adı, ata adı" variant="outlined" />
           </Item>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Item>
+          <Item sx={{ boxShadow: 0 }}>
             <TextField
               style={{ width: '100%' }}
               id="date"
@@ -74,7 +75,7 @@ export default function Stepone() {
           </Item>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Item>
+          <Item sx={{ boxShadow: 0 }}>
             <TextField
               style={{ width: '100%' }}
               id="outlined-select-currency"
@@ -92,7 +93,7 @@ export default function Stepone() {
           </Item>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Item>
+          <Item sx={{ boxShadow: 0 }}>
             <TextField
               style={{ width: '100%' }}
               id="outlined-basic"
@@ -102,12 +103,12 @@ export default function Stepone() {
         </Grid>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Item style={{ width: '50%', display: 'flex', justifyContent: 'flex-end' }}>
+        <Item sx={{ boxShadow: 0 }} style={{ width: '50%', display: 'flex', justifyContent: 'flex-end' }}>
 
         </Item>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Item>
+        <Item sx={{ boxShadow: 0 }}>
           <Button sx={{ width: '150px', fontSize: '8px', marginTop: '10px' }} variant="contained">
             kodu sms-lə göndər
           </Button>
