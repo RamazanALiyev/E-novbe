@@ -1,28 +1,32 @@
+
 import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import './_steptwo.scss';
 import MenuItem from '@mui/material/MenuItem';
-
+import './_steptwo.scss';
 
 const currencies = [
     {
-        value: 'USD',
-        label: '2010',
+        value: '+994',
+        label: 'Azərbaycan',
     },
     {
-        value: 'EUR',
-        label: '2000',
+        value: '+90',
+        label: 'Turkiye',
     },
     {
-        value: 'BTC',
-        label: '2007',
-    },
-    {
-        value: 'JPY',
-        label: '2018',
+        value: '+1',
+        label: 'Amerika',
     },
 ];
+
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+}));
 
 export default function Stepone() {
     const [currency, setCurrency] = React.useState('EUR');
@@ -32,7 +36,7 @@ export default function Stepone() {
     };
     return (
         <Box
-            style={{ width: '100%', backgroundColor: '#fff', marginTop: '30px', border: '1px solid #eaeaea', borderRadius: '10px' }}
+            style={{ backgroundColor: '#fff', marginTop: '30px', border: '1px solid #eaeaea', padding: '20px', borderRadius: '10px' }}
             component="form"
             sx={{
                 '& > :not(style)': { width: '100%' },
@@ -40,29 +44,46 @@ export default function Stepone() {
             noValidate
             autoComplete="off"
         >
-            <div className='form'>
-                <div>
-                    <TextField id="outlined-basic" label="Nəqliyyatın növü" variant="outlined" />
-                    <TextField id="outlined-basic" label="Dövlət qeydiyyat nişanı" variant="outlined" />
-                    <TextField id="outlined-basic" label="Qeydiyyatda olduğu ölkə*" variant="outlined" />
-                </div>
-                <div>
-                    <TextField id="outlined-basic" label="Markası" variant="outlined" />
-                    <TextField
-                        id="outlined-select-currency"
-                        select
-                        label="Buraxılış ili"
-                        value={currency}
-                        onChange={handleChange}
-                    >
-                        {currencies.map((option) => (
-                            <MenuItem key={option.value} value={option.value}>
-                                {option.label}
-                            </MenuItem>
-                        ))}
-                    </TextField>
-                </div>
-            </div>
+            <Grid container rowSpacing={2} columnSpacing={2}>
+                <Grid item xs={12} md={6}>
+                    <Item sx={{ boxShadow: 0 }}>
+                        <TextField style={{ width: '100%' }} id="outlined-basic" label="Nəqliyyatın növü" variant="outlined" />
+                    </Item>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <Item sx={{ boxShadow: 0 }}>
+                        <TextField style={{ width: '100%' }} id="outlined-basic" label="Markası" variant="outlined" />
+                    </Item>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <Item sx={{ boxShadow: 0 }}>
+                        <TextField style={{ width: '100%' }} id="outlined-basic" label="Dövlət qeydiyyat nişanı" variant="outlined" />
+                    </Item>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <Item sx={{ boxShadow: 0 }}>
+                        <TextField
+                            style={{ width: '100%' }}
+                            id="outlined-select-currency"
+                            select
+                            label="Buraxılış ili"
+                            value={currency}
+                            onChange={handleChange}
+                        >
+                            {currencies.map((option) => (
+                                <MenuItem key={option.value} value={option.value}>
+                                    {option.label}
+                                </MenuItem>
+                            ))}
+                        </TextField>
+                    </Item>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <Item sx={{ boxShadow: 0 }}>
+                        <TextField style={{ width: '100%' }} id="outlined-basic" label="Qeydiyyatda olduğu ölkə*" variant="outlined" />
+                    </Item>
+                </Grid>
+            </Grid>
         </Box>
     );
 }

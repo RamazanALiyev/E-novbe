@@ -101,18 +101,18 @@ export default function Stepone() {
               variant="outlined" />
           </Item>
         </Grid>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <Item sx={{ boxShadow: 0 }} style={{ width: '50%', display: 'flex', justifyContent: 'flex-end' }}>
+        <Grid item xs={12} md={6}>
+          <Item sx={{ boxShadow: 0 }} style={{ width: '50%', display: 'flex', justifyContent: 'flex-end' }}>
 
-        </Item>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <Item sx={{ boxShadow: 0 }}>
-          <Button sx={{ width: '150px', fontSize: '8px', marginTop: '10px' }} variant="contained">
-            kodu sms-lə göndər
-          </Button>
-        </Item>
+          </Item>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Item sx={{ boxShadow: 0 }}>
+            <Button sx={{ width: '150px', fontSize: '8px' }} variant="contained">
+              kodu sms-lə göndər
+            </Button>
+          </Item>
+        </Grid>
       </Grid>
     </Box>
   );
